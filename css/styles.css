@@ -1,0 +1,106 @@
+:root{
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196F3;
+  --primary-bg-color: #FFFFFF;
+  --bg-color:#2F303A;
+  --button-color: #F5F4FA;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+.logo {
+  color: var(--accent-color);
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Site nav */
+.logo {
+  color: var(--title-text-color)
+}
+.logo:hover {
+  color: var(--accent-color);
+}
+
+.pagination .link {
+  color: var(--title-text-color);
+}
+.pagination .link:hover,
+.pagination .link:focus {
+  color: var(--accent-color)
+}
+
+.info .link:hover {
+  color: var(--accent-color)}
+
+  .info .link {
+      color:var(--primary-text-color)
+}
+
+/* Основная часть */
+
+.widget {
+  color: var(--primary-bg-color);
+  background-color:#2F303A;
+}
+.button {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+}
+
+
+
+/* Перечень преимуществ */
+.section-title {
+  color: var(--title-text-color);
+}
+
+/* Картинки\Наша команда*/
+.features {
+  background-color: #F5F4FA;
+}
+
+.caption {
+   color: var(--title-text-color)
+}
+/* Страница номер 2 */
+
+
+.nav-button .aside {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+}
+.nav-button .aside:hover {
+  color: var(--primary-bg-color);
+  background-color: #2196F3;
+}
+
+/* Футер */
+footer {
+  background-color: var(--bg-color) ;
+}
+.ggle .point {
+  color: var(--primary-bg-color)
+}
+.ggle .end {
+ color: rgba ( 255, 255, 255, 0.6);
+}
+
+
+
+/* Основной цвет текста   #757575  */
+/* Вторичный цвет текста  #212121; */
+/* Основной цвет фона     #FFFFFF */ 
+/* Вторичный цвет фона   #2F303A */
+/* Акwент 2196F3 */
+/* Размытые надписи в хедере rgba(255, 255, 255, 0.6); */
+
+/* Site nav */
+
