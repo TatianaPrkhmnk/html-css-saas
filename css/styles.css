@@ -10,16 +10,40 @@
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.14;
 }
+
 
 ul {
   list-style: none;
 }
 
+button {
+  font-family: inherit;
+}
 
-/* Site nav */
+
+/* Шапка сайта */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170;
+  outline: 2px solid tomato;
+}
+
+
 .logo {
-  color: var(--title-text-color)
+  font-family: Raleway, cursive;
+    
+    font-size: 26px;
+    line-height:1.2;
+
+  text-decoration: none;
 }
 
 .blue {
@@ -29,19 +53,33 @@ ul {
 .black {
   color: #000000;
 }
+
+
 .pagination .link {
   color: var(--title-text-color);
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
 }
+
 .pagination .link:hover,
 .pagination .link:focus {
   color: var(--accent-color)
 }
 
-.info .link:hover {
+.info .link:hover,
+.info .link:focus {
   color: var(--accent-color)}
 
   .info .link {
-      color: var(--primary-text-color)
+      color: var(--primary-text-color);
+
+        font-weight: 500;
+        letter-spacing: 0.02em; 
+        
+        text-decoration: none;
 }
 
 /* Основная часть */
@@ -50,36 +88,101 @@ ul {
   color: var(--primary-bg-color);
   background-color:#2F303A;
 }
+
 .button {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+      letter-spacing: 0.06em;
 }
 
+.widget-title {
+  
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-align: center;
+    }
 
-
-/* Перечень преимуществ */
 .section-title {
   color: var(--title-text-color);
+
+    font-weight: 700;
+   
 }
 
-/* Картинки\Наша команда*/
-.features {
-  background-color: #F5F4FA;
+
+.section-tagline {
+  
+    font-weight: 400;
+    line-height: 1.71;
 }
+
+/* Картинки*/
+
+/* .features {
+  background-color: #F5F4FA;
+} */
+
+.features .section-title {
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.features .list .desc {
+   
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+/* Наша команда */
 
 .caption {
-   color: var(--title-text-color)
+   color: var(--title-text-color);
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
 }
+
+
 /* Страница номер 2 */
 
 
 .nav-button .aside {
   background-color: var(--button-color);
   border-color: var(--button-color);
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
 }
+
 .nav-button .aside:hover {
   color: var(--primary-bg-color);
   background-color: #2196F3;
+}
+
+.content .section-title {
+
+  font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+   letter-spacing: 0.06em;
+}
+
+.content .text {
+  font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
 }
 
 
@@ -88,18 +191,27 @@ ul {
 footer {
   background-color: var(--bg-color) ;
 }
-.ggle:hover {
-  color: var(--accent-color);
-}
+
 .white {
   color: var(--primary-bg-color);
 }
 .ggle .point {
-  color: var(--primary-bg-color)
+  color: var(--primary-bg-color);
+
+    font-weight: 400;
+    line-height: 1.71;
+
+    text-decoration: none;
 }
 
 .ggle .end {
   color: rgba(255, 255, 255, 0.6) ;
+
+  font-weight: 400;
+    line-height: 1.71;
+
+    text-decoration: none;
+   
 }
 
 /* Основной цвет текста   #757575  */
