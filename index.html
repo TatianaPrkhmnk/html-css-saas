@@ -11,13 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
    rel="stylesheet">
 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
 
-  <link rel="stylesheet" href="./css/styles.css">
+   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   
   <!-- Шапка сайта -->
-  <header class="container">
+
+
+  <header class="page-header">
+    <div class="container">
     <nav>
     <a class="logo" lang="en" href="">
       <span class="blue">Web</span><span class="black">Studio</span>
@@ -33,8 +37,10 @@
       <li><a href="mail" class="link">info@devstudio.com</a></li>
       <li><a href="tel" class="link">+38 096 111 11 11</a></li>
     </ul>
-    </header>
 
+    </div>
+    </header>
+  
 <!-- Основная часть -->
 
     <main>
@@ -45,8 +51,8 @@
     
 <!-- Перечень преимуществ -->
     <section class="section">
-
-      <h2> Приемущества </h2>
+<div class="container">
+      <h2 class="subject"> Преимущества </h2>
       
       <ul class="list"> 
         <li>
@@ -66,24 +72,27 @@
         <p class="section-tagline">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
         </li>
         </ul>
+        </div>
       </section>
-        
-      <section>
 
         <!-- Картинки -->
+        
+      <section class="section no-padding">
 
+        <div class="container">
       <h2 class="caption">Чем мы занимаемся</h2>
      <ul class="list">
       <li><img src="img/box1.jpg" alt="Планшет" width="370"/> </li>
       <li><img src="img/box2.jpg" alt="Ноут" width="370"/> </li>
       <li><img src="img/box3.jpg" alt="Телефон" width="370"/> </li>
     </ul>
+    </div>
       </section>
 
       <!-- Наша команда -->
     
-      <section class="features">
-
+      <section class="features section">
+      <div class="container">
         <h2 class="caption"> Наша команда </h2>
 
         <ul class="list">
@@ -111,6 +120,7 @@
           <p class="desc">UI Designer</p>
         </li>
           </ul>
+          </div>
         
       </section>
 

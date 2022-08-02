@@ -7,7 +7,18 @@
   --button-color: #F5F4FA;
 }
 
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
 
@@ -20,6 +31,12 @@ body {
 
 ul {
   list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 button {
@@ -27,13 +44,17 @@ button {
 }
 
 
-/* Шапка сайта */
+/* Шапка сайта| Page header */
+
 
 .container {
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  
   margin-left: auto;
   margin-right: auto;
-  width: 1170;
-  outline: 2px solid tomato;
+  width: 1200px;
+  outline: 1px solid salmon;
 }
 
 
@@ -69,6 +90,11 @@ button {
   color: var(--accent-color)
 }
 
+.info {
+  padding: 0;
+  margin: 0;
+}
+
 .info .link:hover,
 .info .link:focus {
   color: var(--accent-color)}
@@ -87,9 +113,15 @@ button {
 .widget {
   color: var(--primary-bg-color);
   background-color:#2F303A;
+  text-align: center;
 }
 
 .button {
+  display: inline-block;
+  padding: 10px 34px;
+  min-width: 200px;
+  text-align: center;
+
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
 
@@ -100,15 +132,41 @@ button {
 }
 
 .widget-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
-    text-align: center;
+    }
+
+    
+    /* Перечень преимуществ */
+
+    /* Секция */
+
+    .section {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+
+    .section.no-padding {
+      padding-top: 0;
+      padding-bottom: 0;
+
+    }
+
+    .subject {
+      display: none;
+      margin-top: 0px;
     }
 
 .section-title {
+
+    margin-top: 0;
+    margin-bottom: 10px;
+
   color: var(--title-text-color);
 
     font-weight: 700;
@@ -145,6 +203,9 @@ button {
 /* Наша команда */
 
 .caption {
+  margin-top: 0;
+  margin-bottom: 50px;
+
    color: var(--title-text-color);
 
     font-weight: 700;
@@ -158,6 +219,11 @@ button {
 
 
 .nav-button .aside {
+    display: inline-block;
+    padding: 6px 22px;
+    min-width: 73px;
+    text-align: center;
+
   background-color: var(--button-color);
   border-color: var(--button-color);
 
@@ -172,6 +238,7 @@ button {
 }
 
 .content .section-title {
+  margin-bottom: 4px;
 
   font-weight: 700;
     font-size: 18px;
