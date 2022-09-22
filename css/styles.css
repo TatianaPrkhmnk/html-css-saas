@@ -6,7 +6,8 @@
   --bg-color:#2F303A;
   --button-color: #F5F4FA;
   --icon-color: #afb1b8;
-
+  --main-duration: 250ms;
+  --main-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html{
@@ -103,6 +104,10 @@ button {
       letter-spacing: 0.02em;
       text-decoration: none;
   
+    }
+
+    .link {
+      transition: color var(--main-duration) var(--main-timing-function);
     }
 
     .control {
@@ -219,7 +224,6 @@ padding-bottom: 200px;
 }
 
 .button {
-  display: inline-block;
   padding: 10px 34px;
   min-width: 200px;
   text-decoration: none;
@@ -233,6 +237,7 @@ padding-bottom: 200px;
       letter-spacing: 0.06em;
       border-radius: 4px;
       border: 0;
+      cursor: pointer;
 }
 
 .widget-title {
@@ -441,6 +446,9 @@ padding-bottom: 200px;
 .icon-link {
     fill: var(--icon-color);
     background-color: var(--primary-bg-color);
+
+    transition: background-color var(--main-duration) var(--main-timing-function), fill var(--main-duration) var(--main-timing-function);
+  
 }
 
 
@@ -501,7 +509,10 @@ margin: 12px;
   outline: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+
+  transition: fill var(--main-duration) var(--main-timing-function), outline var(--main-duration) var(--main-timing-function);
 }
+
 
 .group-pic {
   width: 100%;
@@ -565,16 +576,17 @@ margin: 12px;
   width: 370px;
   margin: 15px;
   outline: 1px solid rgba(238, 238, 238, 1);
+  transition: box-shadow var(--main-duration) var(--main-timing-function);
+
   /* margin-right: 30px;
   margin-bottom: 30px; */
   
   /* width: calc((100%-60px)/3);
   /* margin: 15px; */ 
-  
 }
 
 .content .item-photo:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);  
 }
 
 .content .item-photo:nth-child(3n) {
@@ -585,33 +597,19 @@ margin: 12px;
   margin-bottom: 0;
 }
 
+/* Карточка товара - ховер */
 
 .card {
   position: relative;
-}
-
-.card::before {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-}
-
-.card:hover::before {
-  opacity: 1;
+  overflow: hidden;
 }
 
 .card-text {
+  position: absolute;
   top: 0;
   left: 0;
-  display: inline-block;
-  content: "";
-  position: absolute;
   color: var(--primary-bg-color);
-  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
 
   padding: 63px 24px;
 
@@ -621,10 +619,12 @@ margin: 12px;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
+    transition: transform var(--main-duration) var(--main-timing-function);
+    transform: translateY(100%);
 }
 
-.card-text:hover {
-  opacity: 1;
+.item-photo:hover .card-text {
+  transform: translateY(0);
 }
 
 .content .section-title {
@@ -667,20 +667,24 @@ margin: 12px;
   font-style: normal;
 }
 
-
 .white {
   color: var(--primary-bg-color);
 }
+
 .ggle .point {
   color: var(--primary-bg-color);
 
     font-weight: 400;
     line-height: 1.71;
-    font-weight: 400;
     
-      letter-spacing: 0.03em;
-
+    letter-spacing: 0.03em;
     text-decoration: none;
+
+    transition: color var(--main-duration) var(--main-timing-function);
+}
+
+.point:hover {
+  color: var(--accent-color);
 }
 
 .ggle li:not(:last-child) {
@@ -694,8 +698,13 @@ margin: 12px;
     line-height: 1.71;
 
     text-decoration: none;
-   
+    transition: color var(--main-duration) var(--main-timing-function);
 }
+
+.end:hover {
+  color: var(--accent-color);
+}
+
 /* Middle - Середина футера  */
 
 .middle {
@@ -721,6 +730,8 @@ margin: 12px;
   border-radius: 50%;
   fill: var(--primary-bg-color);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--main-duration) var(--main-timing-function);
 }
 
 .icon-link-color:hover {
@@ -733,10 +744,10 @@ margin: 12px;
     text-transform: uppercase;
 }
 
-/* .telega {
+.telega {
   display: flex;
   position: relative;
-} */
+}
 
 .iconsend {
   width: 24px;
@@ -759,19 +770,28 @@ margin: 12px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--main-duration) var(--main-timing-function);
+  overflow: hidden;
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal {
   position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     padding: 40px;
 
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--main-timing-function) var(--main-duration);
 
   width: 528px;
   height: 581px;

@@ -46,7 +46,7 @@
       <section class="widget">
         <div class="container">
         <h1 class="widget-title">Эффективные решения для вашего бизнеса</h1>
-        <a href="" class="button" data-open-modal>Заказать услугу</a>
+        <button class="button" data-modal-open type="button">Заказать услугу</button>
       </div>
       </section>
     
@@ -361,31 +361,12 @@
 
               </footer>
               
-<div class="backdrop is-hidden" data-backdrop>
+<div class="backdrop is-hidden" data-modal>
   <div class="modal">
-    <p>Оставьте свои данные, мы вам перезвоним</p> <button data-close-modal>Закрыть</button></div>
+    <p>Оставьте свои данные, мы вам перезвоним</p> <button data-modal-close type="button">Закрыть</button></div>
 </div>
 
-<!-- <script>
-  const refs = {
-    openModalBtn: document.querySelector("[data-open-modal]"),
-    closeModalBtn: document.querySelector("[data-close-modal]"),
-    backdrop: document.querySelector("[data-backdrop]"),
-  }
-
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.backdrop.addEventListener("click", LogBackdropClick);
-
-  function toggleModal() {
-    refs.backdrop.classList.toogle("is-hidden");
-  }
-
-  function LogBackdropClick() {
-    console.log("Это клик в бекдроп");
-  }
-
-</script> -->
+<script src="./js/modal.js"></script>
     
 </body>
 </html>
