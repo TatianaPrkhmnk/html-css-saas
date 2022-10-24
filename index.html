@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
 
    <link rel="stylesheet" href="./css/styles.css">
+   <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
   
@@ -353,7 +354,7 @@
 
             <div class="footer-button">
               <h2 class="tittle">Подпишитесь на рассылку</h2>
-              <input type="email" class="input-footer" placeholder="E-mail">
+              <input type="email" class="input-footer" placeholder="E-mail" name="email">
              <a href="" class="button telega">Подписаться<svg class="iconsend"><use href="./img/sprite.svg#iconsend"></use></svg></a>
             </div>
       
@@ -365,7 +366,7 @@
 <div class="backdrop is-hidden" data-modal>
   <div class="modal">
     <button class="btn-modal" data-modal-close type="button"> <svg class="modal-close" width="18" height="18"><use href="./img/sprite.svg#close"></use> </svg></button>
-  <h2 class="tittle-modal">Оставьте свои данные, мы вам перезвоним</h2>
+  <b class="tittle-modal">Оставьте свои данные, мы вам перезвоним</b>
   <form class="form" autocomplete="off">
     
       <label class="label"> Имя
@@ -376,7 +377,7 @@
 
       <label class="label"> Телефон
         <span class="position">
-          <input type="telephone" class="input" placeholder=" ">
+          <input name="telephone" class="input" placeholder=" ">
           <svg class="icon-form" width="18" height="18">
             <use href="./img/sprite.svg#phone"></use> 
           </svg> </span>
@@ -384,7 +385,7 @@
        
       <label class="label"> Почта
         <span class="position">
-          <input type="email" class="input" placeholder=" ">
+          <input name="email" class="input" placeholder=" ">
           <svg class="icon-form" width="18" height="18">
             <use href="./img/sprite.svg#email"></use>
           </svg>
@@ -392,12 +393,14 @@
       </label>
 
       <label class="label"> Комментарий
-          <textarea placeholder="Введите текст" name="feedback" rows="5" class="input comments"></textarea> 
+          <textarea placeholder="Введите текст" name="feedback" class="input comments"></textarea> 
       </label>
 
       <label class="checkbox-label"> <input class="checkbox" type="checkbox" name="topic" >
-      <span class="checkbox-icon"></span>
-      Соглашаюсь с рассылкой и принимаю <a class="terms"> Условия договора</a>
+      <span class="checkbox-icon">
+        <svg class="icon-form" width="18" height="18">
+      </span>
+      Соглашаюсь с рассылкой и принимаю <a href="" class="terms"> Условия договора</a>
       </label>
       <button class="button button-modal">Отправить</button>
 

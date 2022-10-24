@@ -1,0 +1,152 @@
+.page-header {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: Raleway, cursive;
+
+  font-size: 26px;
+  line-height: 1.2;
+
+  text-decoration: none;
+}
+
+.blue {
+  color: var(--accent-color);
+}
+
+.black {
+  color: #000000;
+}
+
+
+.pagination {
+  display: flex;
+  margin-left: 93px;
+  padding: 0;
+  .link {
+  
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+  
+      color: var(--title-text-color);
+  
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+  
+    }
+        &:hover,
+        &:focus {
+          color: var(--accent-color);
+        }
+}
+
+.link {
+  transition: color var(--main-duration) var(--main-timing-function);
+}
+
+.control {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  Width: 100%;
+  Height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: -1px;
+  left: 0;
+}
+
+
+.item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.info-pic {
+  margin-right: 10px;
+}
+
+/* .link .item-mail:hover {
+    fill: var(--accent-color);
+  } */
+
+/* .item-mail::before {
+    display:inline-block;
+    width: 16px;
+    height: 12px;
+    content: '';
+    background-image: url(../img/svg/envelope.svg);
+    background-size: contain;
+    background-position: center;
+    margin-right: 10px;
+  }
+
+    .item-tel::before {
+      display: inline-block;
+        width: 10px;
+        height: 16px;
+        content: '';
+        background-image: url(../img/svg/smartphone.svg);
+        background-size: contain;
+        background-position: center;
+        margin-right: 10px;
+    } */
+
+
+
+
+.info {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+
+   .link {
+      display: flex;
+      align-items: center;
+    }
+}
+
+.info .item .item-mail:hover,
+.info .item .item-mail:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+
+.info .item .item-tel:hover,
+.info .item .item-tel:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.info .item .item-mail,
+.info .item .item-tel {
+  color: var(--primary-text-color);
+  fill: var(--primary-text-color);
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+}

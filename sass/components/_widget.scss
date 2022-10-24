@@ -1,0 +1,95 @@
+.widget {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: var(--primary-bg-color);
+  text-align: center;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url(../img/vidget.jpg);
+
+    &-title {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+    
+        text-align: center;
+        text-transform: uppercase;
+        max-width: 696px
+      }
+}
+
+.button {
+  padding: 10px 34px;
+  min-width: 200px;
+  text-decoration: none;
+
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* Перечень преимуществ */
+
+.list {
+  display: flex;
+  margin: auto;
+
+   .sizes {
+  
+      width: 270px;
+      height: 120px;
+      margin-bottom: 30px;
+  
+      background-color: #F5F4FA;
+  
+      padding-left: 100px;
+      padding-top: 25px;
+    }
+}
+
+.list-s:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+.size {
+  height: 428px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.sizes {
+  max-width: 270px;
+  justify-content: center;
+  align-items: center;
+
+  &-pic {
+      width: 70px;
+      height: 70px;
+    }
+}
+
+
+.pic:hover {
+  fill: #FFFFFF;
+}
