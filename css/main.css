@@ -51,9 +51,8 @@ button {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     max-width: 480px;
   }
@@ -61,6 +60,11 @@ button {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -243,6 +247,11 @@ button {
 .list .list-s:not(:last-child) {
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .list .list-s:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 .list .sizes {
   height: 120px;
   margin-bottom: 30px;
@@ -287,13 +296,23 @@ button {
 @media screen and (min-width: 768px) {
   .list-s {
     width: calc(50% - 30px);
-    min-width: 354px;
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-s {
+    max-width: 270px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .list-s:nth-child(2n+1) {
     margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-s:nth-child(2n+1) {
+    margin-right: -30px;
   }
 }
 
