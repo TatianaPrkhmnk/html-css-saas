@@ -21,14 +21,20 @@
   <!-- Шапка сайта -->
 
 
-  <!-- <header class="page-header">
+  <header class="page-header ">
     <div class="container main-nav">
     <a class="logo" lang="en" href="">
       <span class="blue">Web</span><span class="black">Studio</span>
     </a>
+<button type="button" class="btn-mob-menu" data-menu-open>
+  <svg class="icon-mob-menu"  width="40" height="40">
+    <use href="./img/sprite.svg#icon-mob-menu"></use>
+  </svg>
+</button>
+
 <nav class="nav">
      <ul class="pagination">
-    <li class="item control"> <a href="" class="link current">Студия</a> </li>
+    <li class="item"> <a href="" class="link current">Студия</a> </li>
     <li class="item"> <a href="portfolio.html" class="link">Портфолио</a> </li>
     <li class="item"> <a href="" class="link">Контакты</a> </li>
     </ul>
@@ -37,9 +43,38 @@
       <li class="item"><a href="mail" class="link item-mail"><svg class="info-pic" width="16px" height="12px"> <use href="./img/sprite.svg#envelope"></use></svg>info@devstudio.com</a></li>
       <li class="item"><a href="tel" class="link item-tel"><svg class="info-pic" width="10px" height="16px"> <use href="./img/sprite.svg#smartphone"></use></svg>+38 096 111 11 11</a></li>
     </ul>
-
     </div>
-    </header> -->
+
+    <!-- Мобильное меню/Шапка сайта -->
+
+    <div class="mob-menu is-hidden" data-menu >
+      <button type="button" class="btn-mob-menu-close" data-menu-close>
+  <svg class="mob-menu-close" width="40" height="40">
+    <use href="./img/sprite.svg#icon-close-btn-mob-menu"></use> 
+  </svg></button>
+
+   <ul class="pagination-mob">
+    <li class="pagination-item-mob"> <a href="" class="pagination-link current-mob">Студия</a> </li>
+    <li class="pagination-item-mob"> <a href="portfolio.html" class="pagination-link">Портфолио</a> </li>
+    <li class="pagination-item-mob"> <a href="" class="pagination-link">Контакты</a> </li>
+    </ul>
+    <div>
+   <ul class="info-mob">
+      <li class="info-item-mob"><a href="tel" class="info-item-tel-mob">+38 096 111 11 11</a></li>
+      <li class="info-item-mob"><a href="mail" class="info-item-mail-mob">info@devstudio.com</a></li>
+    </ul>
+
+    <ul class="social-mob">
+      <li class="social-item-mob"><a href="" class="social-link-mob">Instagram</a></li>
+      <li class="social-item-mob"><a href="" class="social-link-mob">Twitter</a></li>
+      <li class="social-item-mob"><a href="" class="social-link-mob">Facebook</a></li>
+      <li class="social-item-mob"><a href="" class="social-link-mob">LinkedIn</a></li>
+    </ul>
+</div>
+      </div>
+    </header>
+ 
+
   
 <!-- Основная часть -->
 
@@ -110,20 +145,32 @@
       <li class="no-size"><img src="img/box3.jpg" alt="Телефон" width="100%"/> <p class="img-text">доступные решения</p> </li>
     </ul>
     </div>
-      </section> -->
+      </section>  -->
 
       <!-- Наша команда -->
     
-      <!-- <section class="features section">
+      <section class="features section">
       <div class="container">
         <h2 class="caption"> Наша команда </h2>
 
         <ul class="list">
           <li class="size">
-        <img src="img/r1.jpg" alt="фото Игоря" width="270">
+            <picture>
+              <source 
+              srcset="./img/r1.jpg 1x, ./img/r1-2x.jpg 2x" 
+              media="(min-width:1200px)">
+              <source 
+              srcset="./img/r1-tablet.jpg 1x, ./img/r1-tablet-2x.jpg 2x" 
+              media="(min-width:768px)">
+              <source 
+              srcset="./img/r1-mob.jpg 1x, ./img/r1-mob-2x.jpg 2x" 
+              media="(min-width:320px)">
+              <img class="pic-employee"
+        srcset="./img/r1.jpg 1x, ./img/r1-2x.jpg 2x" 
+        src="./img/r1.jpg" alt="фото Игоря" >
+            </picture>
           <h3 class="section-title center">Игорь Демьяненко</h3>
           <p class="desc">Product Designer</p>
-
           <ul class="socials">
 
             <li class="icon">
@@ -152,7 +199,21 @@
             </a></li>
           </ul>
 
-          <li class="size"><img src="img/r2.jpg" alt="фото Ольги" width="270">
+          <li class="size">
+          <picture>
+              <source 
+              srcset="./img/r2.jpg 1x, ./img/r2-2x.jpg 2x" 
+              media="(min-width:1200px)">
+              <source 
+              srcset="./img/r2-tablet.jpg 1x, ./img/r2-tablet-2x.jpg 2x" 
+              media="(min-width:768px)">
+              <source 
+              srcset="./img/r2-mob.jpg 1x, ./img/r2-mob-2x.jpg 2x" 
+              media="(min-width:320px)">
+              <img class="pic-employee"
+        srcset="./img/r2.jpg 1x, ./img/r2-2x.jpg 2x" 
+        src="./img/r2.jpg" alt="фото сотрудника Ольги Репиной" >
+            </picture>
           <h3 class="section-title center">Ольга Репина</h3>
           <p class="desc">Frontend Developer</p>
           <ul class="socials">
@@ -189,7 +250,21 @@
         </li>
 
         
-          <li class="size"><img src="img/r3.jpg" alt="фото Николая" width="270">
+          <li class="size">
+          <picture>
+              <source 
+              srcset="./img/r3.jpg 1x, ./img/r3-2x.jpg 2x" 
+              media="(min-width:1200px)">
+              <source 
+              srcset="./img/r3-tablet.jpg 1x, ./img/r3-tablet-2x.jpg 2x" 
+              media="(min-width:768px)">
+              <source 
+              srcset="./img/r3-mob.jpg 1x, ./img/r3-mob-2x.jpg 2x" 
+              media="(min-width:320px)">
+              <img class="pic-employee"
+        srcset="./img/r3.jpg 1x, ./img/r3-2x.jpg 2x" 
+        src="./img/r3.jpg" alt="фото сотрудника Николая Тарасова" >
+            </picture>
           <h3 class="section-title center">Николай Тарасов</h3>
           <p class="desc">Marketing</p>
           <ul class="socials">
@@ -226,7 +301,21 @@
         </li>
 
         
-        <li class="size"> <img src="img/r4.jpg" alt="фото Михаила" width="270">
+        <li class="size"> 
+          <picture>
+              <source 
+              srcset="./img/r4.jpg 1x, ./img/r4-2x.jpg 2x" 
+              media="(min-width:1200px)">
+              <source 
+              srcset="./img/r4-tablet.jpg 1x, ./img/r4-tablet-2x.jpg 2x" 
+              media="(min-width:768px)">
+              <source 
+              srcset="./img/r4-mob.jpg 1x, ./img/r4-mob-2x.jpg 2x" 
+              media="(min-width:320px)">
+              <img class="pic-employee"
+        srcset="./img/r4.jpg 1x, ./img/r4-2x.jpg 2x" 
+        src="./img/r4.jpg" alt="фото сотрудника Михаила Ермакова" >
+            </picture>
           <h3 class="section-title center">Михаил Ермаков</h3>
           <p class="desc">UI Designer</p>
           <ul class="socials">
@@ -264,9 +353,9 @@
           </ul>
           </div>
         
-      </section> -->
-<!-- 
-      <section class="section ">
+      </section>
+
+       <!-- <section class="section ">
         <div class="container">
           <h2 class="caption">Постоянные клиенты</h2>
           <ul class="company">
@@ -396,6 +485,7 @@
 </div>
 
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
     
 </body>
 </html>
