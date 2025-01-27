@@ -86,6 +86,14 @@ button {
   padding-bottom: 16px;
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1923076923;
+    letter-spacing: 0.03em;
+  }
+}
 
 .blue {
   color: var(--accent-color);
@@ -123,6 +131,13 @@ button {
   margin-left: 93px;
   padding: 0;
 }
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin-left: 88px;
+    margin-right: 84px;
+  }
+}
+
 .pagination .link {
   display: block;
   padding-top: 32px;
@@ -132,6 +147,12 @@ button {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color var(--main-duration) var(--main-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .pagination .link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+  }
 }
 
 .pagination .link:hover,
@@ -143,7 +164,7 @@ button {
   position: relative;
 }
 
-.current::after {
+.control::after {
   content: "";
   position: absolute;
   Width: 100%;
@@ -201,10 +222,21 @@ button {
     flex-direction: column;
   }
 }
+@media screen and (min-width: 1200px) {
+  .info {
+    flex-direction: row;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .info .item:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .info .item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -229,9 +261,22 @@ button {
   text-decoration: none;
 }
 
-.info .link {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .info .link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .info .link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
+  }
 }
 
 .mob-menu {
@@ -523,9 +568,22 @@ button {
   text-transform: uppercase;
 }
 
-.section.no-padding {
-  padding-top: 0;
-  padding-bottom: 94px;
+.section.none {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .section.none {
+    display: contents;
+    padding-top: 0;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .no-padding {
+    padding-top: 0;
+    margin-bottom: 94px;
+  }
 }
 
 .subject {
@@ -751,16 +809,31 @@ margin: 12px;
 /* Постоянные клиенты */
 .company {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.company-logo:not(:last-child) {
-  margin-right: 30px;
+.company-logo {
+  margin: 15px;
+  width: calc((100% - 60px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .company-logo {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .company-logo {
+    flex-basis: calc((100% - 180px) / 6);
+  }
 }
 
 .group {
-  display: inline-block;
-  width: 170px;
-  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   outline: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
@@ -787,8 +860,27 @@ margin: 12px;
   margin-bottom: 20px;
 }
 
+.adress {
+  margin-bottom: 60px;
+}
+
 .flex {
-  display: flex;
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .flex {
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 .ggle,
@@ -803,6 +895,7 @@ margin: 12px;
 .ggle .point {
   color: var(--primary-bg-color);
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
@@ -814,7 +907,7 @@ margin: 12px;
 }
 
 .ggle li:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .ggle .end {
@@ -831,10 +924,13 @@ margin: 12px;
 
 /* Middle - Середина футера  */
 .middle {
-  width: 206px;
   height: 80px;
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-bottom: 60px;
+}
+
+.tittle {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .down {
@@ -868,6 +964,8 @@ margin: 12px;
 .telega {
   display: inline-block;
   position: relative;
+  padding-left: 29px;
+  padding-right: 62px;
 }
 
 .iconsend {
@@ -879,11 +977,15 @@ margin: 12px;
   margin-left: 10px;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-button {
+    display: inline-block;
+  }
+}
+
 .input-footer {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  left: 815px;
-  top: 1736px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -891,6 +993,17 @@ margin: 12px;
   padding-left: 16px;
   margin-right: 12px;
   color: var(--button-color);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .input-footer {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .input-footer {
+    max-width: 358px;
+  }
 }
 .input-footer:focus {
   border: 1px solid var(--accent-color);
@@ -906,6 +1019,7 @@ margin: 12px;
 
 .items:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .nav-button .aside {
@@ -932,6 +1046,8 @@ margin: 12px;
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
+  justify-content: center;
+  align-content: center;
 }
 
 .content .item-photo {

@@ -4,12 +4,15 @@
    display: flex;
    justify-content: center;
    margin-bottom: 50px;
+  // margin-bottom: 25px;
+  //   flex-wrap: wrap;
  }
+
 
  .items:not(:last-child) {
    margin-right: 8px;
+   margin-bottom: 15px;
  }
-
 
 
  .nav-button .aside {
@@ -41,8 +44,10 @@
  .content {
    display: flex;
    flex-wrap: wrap;
-
    margin: -15px;
+
+      justify-content: center;
+        align-content: center;
  }
 
  .content .item-photo {

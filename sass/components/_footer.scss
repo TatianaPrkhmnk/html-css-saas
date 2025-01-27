@@ -1,17 +1,31 @@
 .footer {
   background-color: var(--bg-color);
   padding: 60px;
-
    .logo {
       display: inline-block;
       margin-bottom: 20px;
     }
 }
 
-.flex {
-  display: flex;
+.adress {
+  margin-bottom: 60px;
 }
 
+.flex {
+  display: block;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+@media screen and (min-width: 1200px) {
+justify-content: space-between;
+text-align: left;
+}}
 
 .ggle,
 .logo {
@@ -26,6 +40,7 @@
   color: var(--primary-bg-color);
 
   font-weight: 400;
+  font-size: 14px;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
@@ -39,7 +54,8 @@
 }
 
 .ggle li:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  // margin-bottom: 9px;
 }
 
 .ggle .end {
@@ -59,11 +75,22 @@
 /* Middle - Середина футера  */
 
 .middle {
-  width: 206px;
   height: 80px;
-  margin-left: 70px;
-  margin-right: 93px;
+  margin-bottom: 60px;
+
+  // @media screen and (min-width: 1200px) {
+  //     margin-left: 70px;
+  //     margin-right: 93px;
+  //     width: 206px;
+  //   }
 }
+
+.tittle {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
 
 .down {
   margin-left: 0;
@@ -96,9 +123,12 @@
   text-transform: uppercase;
 }
 
+
 .telega {
   display: inline-block;
   position: relative;
+  padding-left: 29px;
+  padding-right: 62px;
 }
 
 .iconsend {
@@ -110,11 +140,14 @@
   margin-left: 10px;
 }
 
+.footer-button {
+@media screen and (min-width: 1200px) {
+  display: inline-block;
+}}
+
 .input-footer {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  left: 815px;
-  top: 1736px;
   background-color: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -123,6 +156,16 @@
   padding-left: 16px;
   margin-right: 12px;
   color: var(--button-color);
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+  width: 450px;
+  }
+
+    @media screen and (min-width: 1200px) {
+      max-width: 358px;
+    }
 
   &:focus {
       border: 1px solid var(--accent-color);
