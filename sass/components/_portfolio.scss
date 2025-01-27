@@ -78,7 +78,9 @@
 .card {
   position: relative;
   overflow: hidden;
+  display: block;
 }
+
 
 .card-text {
   position: absolute;
@@ -90,7 +92,7 @@
   padding: 63px 24px;
 
   width: 100%;
-  height: 100%;
+  height: 101%;
 
   font-size: 18px;
   line-height: 1.56;
@@ -120,4 +122,10 @@
   line-height: 1.88;
   margin-bottom: 20px;
   margin-left: 24px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
